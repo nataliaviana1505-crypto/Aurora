@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jardim Encantado da Aurora</title>
+<meta name="description" content="Convite de 1 ano da Aurora — Jardim Encantado">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&family=Allura&display=swap');
+:root{--rose:#b86f8d;--lilac:#927ba9;--green:#718a70;--cream:#fffaf6;--ink:#5d5260;--gold:#c7a56a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#fffaf7 0%,#fbf5fa 46%,#f5f7f0 100%);color:var(--ink);font-family:Montserrat,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#b86f8d 1px,transparent 1px);background-size:38px 38px;mask-image:linear-gradient(to bottom,black,transparent 80%);z-index:0}
+.hero{position:relative;background:linear-gradient(135deg,#f8e8ed 0%,#fff7ef 48%,#ece6f2 100%);min-height:76vh;overflow:hidden;z-index:1;padding-bottom:48px}
+.hero video{width:calc(100% - 13vw);height:min(68vh,650px);margin:28px auto 0;display:block;object-fit:cover;filter:saturate(.92);border:3px solid rgba(255,255,255,.8);border-radius:34px;box-shadow:0 0 0 10px rgba(255,245,249,.18),0 22px 55px rgba(30,20,30,.28)}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 25%,rgba(255,255,255,.7),transparent 28%),radial-gradient(circle at 82% 35%,rgba(255,255,255,.6),transparent 30%);pointer-events:none}
+.hero:before{content:"✿  🦋  ✿  🌸  ✿  🦋  ✿";position:absolute;z-index:3;left:50%;bottom:5px;transform:translateX(-50%);width:100%;text-align:center;color:#b77b95;font-size:22px;letter-spacing:8px;pointer-events:none}
+.hero-badge{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);z-index:4;color:#fff;text-align:center;letter-spacing:.22em;font-size:10px;text-transform:uppercase;text-shadow:0 2px 14px #0008;background:rgba(80,54,72,.18);padding:8px 18px;border-radius:999px;backdrop-filter:blur(4px);white-space:nowrap}
+.hero-badge strong{display:block;font-family:'Great Vibes',cursive;font-size:clamp(42px,8vw,72px);letter-spacing:0;text-transform:none;font-weight:400;margin-top:3px}
+section{position:relative;z-index:1;max-width:920px;margin:auto;padding:68px 22px;text-align:center}
+.eyebrow{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--green);font-weight:600}
+h1{margin:12px 0 0;font-family:'Allura',cursive;font-size:clamp(92px,17vw,155px);font-weight:400;color:var(--rose);line-height:.9;text-shadow:0 5px 22px rgba(184,111,141,.12)}
+.subtitle{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--lilac);margin:12px 0 22px}
+.flowerline{font-size:22px;letter-spacing:9px;margin:22px 0;color:#9a899f}
+.quote{max-width:720px;margin:0 auto;font-family:'Cormorant Garamond',serif;font-size:27px;line-height:1.45;color:#625766}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{position:relative;background:rgba(255,255,255,.82);border:1px solid rgba(184,111,141,.18);border-radius:30px;padding:27px 15px;box-shadow:0 18px 50px rgba(91,69,97,.09);backdrop-filter:blur(7px)}
+.card:before{content:"✦";position:absolute;top:10px;right:15px;color:#d7c39a;font-size:12px}.card .icon{font-size:28px}.card b{display:block;margin-top:10px;font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--rose)}.card span{font-size:12px;line-height:1.5}
+.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:13px;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;min-width:220px;padding:16px 23px;border-radius:999px;text-decoration:none;font-weight:600;font-size:12px;letter-spacing:.02em;transition:.25s;box-shadow:0 10px 25px rgba(93,70,100,.12)}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px rgba(93,70,100,.16)}.primary{background:linear-gradient(135deg,#bd7894,#9f6984);color:#fff}.secondary{background:#fff;color:var(--lilac);border:1px solid #ded4e3}
+.gift{margin-top:20px;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(248,240,249,.92));border-radius:34px;padding:32px;border:1px solid #eadfea;box-shadow:0 16px 45px rgba(93,70,100,.07)}
+.gift ul{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}.gift li{background:#fff;border-radius:999px;padding:11px 17px;font-size:12px;border:1px solid #eadfe9;box-shadow:0 5px 12px #6d5b7510}
+.warning{margin:28px auto 0;max-width:650px;padding:18px 21px;border-radius:20px;background:#fff4f2;border:1px solid #efd5d1;font-size:12px;line-height:1.65;color:#735b61}
+.parents{padding-top:25px}.parents p{font-family:'Cormorant Garamond',serif;font-size:27px;line-height:1.5}.footer{padding:22px;text-align:center;font-family:'Great Vibes',cursive;font-size:34px;color:var(--green)}
+.decor{position:absolute;pointer-events:none;z-index:0;opacity:.34;filter:drop-shadow(0 5px 8px #7c638322)}.d1{left:2%;top:35%;font-size:55px;animation:float 5s ease-in-out infinite}.d2{right:3%;top:25%;font-size:55px;animation:float 6s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0) rotate(-5deg)}50%{transform:translate(7px,-18px) rotate(7deg)}}
+@media(max-width:700px){.hero{min-height:55vh}.hero video{height:55vh}.hero-badge{bottom:38px;white-space:normal;width:90%;font-size:8px}.hero-badge strong{font-size:43px}.details{grid-template-columns:1fr}.quote{font-size:23px}.card{padding:22px}.buttons .btn{width:100%;min-width:0}.gift{padding:25px 16px}}
+
+.garden-title{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.36em;color:#6f7a61;margin-top:9px;font-weight:600}
+.main-invite{padding-top:58px}
+.main-invite h1{margin-top:5px}
+.event-details{max-width:560px;margin:34px auto 10px;text-align:left}
+.event-row{display:flex;align-items:center;gap:19px;padding:15px 8px;border-bottom:1px solid rgba(184,111,141,.20)}
+.event-row:last-child{border-bottom:0}
+.event-icon{width:48px;height:48px;border:1px solid #d9b9c7;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#b86f8d;font-size:25px;background:#fff8fb;flex:none}
+.event-row small{display:block;font-size:9px;letter-spacing:.25em;color:#8d8790;margin-bottom:4px;font-weight:600}
+.event-row strong{font-family:'Cormorant Garamond',serif;font-size:25px;color:#7a586a;font-weight:600}
+.action-buttons{max-width:560px;margin:25px auto 0;display:flex;flex-direction:column;gap:14px}
+.action-buttons .btn{width:100%;min-width:0;border:0;cursor:pointer}
+.action-buttons .btn span{flex:1;text-align:center;letter-spacing:.11em;font-size:11px}
+.action-buttons .btn b{font-size:20px;font-weight:400}
+.gift-toggle{font-family:Montserrat,sans-serif}
+.gift-panel{background:rgba(255,255,255,.88);border:1px solid #ead5df;border-radius:22px;padding:22px;margin-top:-3px;box-shadow:0 10px 28px rgba(93,70,100,.08);animation:reveal .3s ease}
+.gift-panel[hidden]{display:none}
+.panel-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:#9b6980;margin-bottom:13px}
+.gift-panel ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.gift-panel li{font-size:12px;color:#6c606a;padding:9px;border-radius:12px;background:#fff8fb}
+.warning{margin:16px auto 0;max-width:560px;padding:17px 20px;border-radius:18px;background:rgba(255,247,244,.9);border:1px solid #ead1cf;font-size:12px;line-height:1.65;color:#745c64}
+.warning em{display:inline-block;margin-top:5px;font-family:'Allura',cursive;font-size:25px;color:#a86680}
+.parents{padding-top:45px}
+@keyframes reveal{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){
+.hero video{width:calc(100% - 26px);height:50vh;margin-top:13px;border-radius:24px}
+.hero{min-height:59vh;padding-bottom:38px}
+.hero-badge{bottom:48px}
+.hero-badge strong{font-size:42px}
+.main-invite{padding-top:50px}
+.event-row strong{font-size:23px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <video autoplay muted loop playsinline controls poster="">
+    <source src="video-aurora.mp4" type="video/mp4">
+    Seu navegador não consegue reproduzir este vídeo.
+  </video>
+  <div class="hero-badge">um convite para viver um momento mágico<strong>Jardim Encantado</strong></div>
+</header>
+
+
+<section class="main-invite">
+  <div class="decor d1">🦋</div><div class="decor d2">🌸</div>
+  <div class="eyebrow">um dia mágico no</div>
+  <div class="garden-title">JARDIM ENCANTADO</div>
+  <h1>Aurora</h1>
+  <div class="subtitle">1 ANINHO</div>
+  <div class="flowerline">✦　♡　✦</div>
+  <p class="quote">“No jardim encantado da vida, cada sorriso é uma flor e cada momento de amor é uma nova magia.”</p>
+
+  <div class="event-details">
+    <div class="event-row"><div class="event-icon">♡</div><div><small>DATA</small><strong>06 de dezembro de 2026</strong></div></div>
+    <div class="event-row"><div class="event-icon">◷</div><div><small>HORÁRIO</small><strong>às 13h</strong></div></div>
+    <div class="event-row"><div class="event-icon">⌖</div><div><small>LOCAL</small><strong>Espaço Casa Blanca</strong></div></div>
+  </div>
+
+  <div class="action-buttons">
+    <button class="btn secondary gift-toggle" type="button" onclick="toggleGifts()" aria-expanded="false">🎁 <span>SUGESTÕES DE PRESENTES</span><b>→</b></button>
+    <div id="giftPanel" class="gift-panel" hidden>
+      <div class="panel-title">Com carinho, se desejar nos presentear</div>
+      <ul>
+        <li>🧸 Brinquedos</li>
+        <li>👗 Roupas — tamanho 1 e 2</li>
+        <li>👟 Calçados — tamanhos 20, 21 e 22</li>
+      </ul>
+    </div>
+
+    <a class="btn secondary" href="https://maps.app.goo.gl/dAVg8Ru5mXF5zsZP7" target="_blank" rel="noopener">📍 <span>COMO CHEGAR</span><b>→</b></a>
+
+    <a class="btn primary" href="https://wa.me/5531971444254?text=Ol%C3%A1!%20Quero%20confirmar%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%201%20ano%20da%20Aurora." target="_blank" rel="noopener">♡ <span>CONFIRMAR PRESENÇA</span><b>→</b></a>
+  </div>
+
+  <div class="warning"><strong>Quem não confirmar presença não irá poder entrar na festa.</strong><br><em>Confirmar presença até o dia 29 de novembro.</em></div>
+</section>
+
+<section class="parents">
+  <div class="flowerline">𓆸 🦋 𓆸</div>
+  <div class="eyebrow">um agradecimento dos papais</div>
+  <p>“A presença de cada pessoa querida tornará o jardim da Aurora ainda mais florido. Obrigado por fazer parte da nossa história e por celebrar conosco este primeiro capítulo tão especial.”</p>
+  <div class="footer">Com amor, os papais da Aurora ♡</div>
+</section>
+<script>
+function toggleGifts(){
+  const panel=document.getElementById('giftPanel');
+  const btn=document.querySelector('.gift-toggle');
+  const open=panel.hasAttribute('hidden');
+  if(open){panel.removeAttribute('hidden');btn.setAttribute('aria-expanded','true');}
+  else{panel.setAttribute('hidden','');btn.setAttribute('aria-expanded','false');}
+}
+</script>
+</body>
+</html>
