@@ -67,9 +67,64 @@ h1{margin:12px 0 0;font-family:'Allura',cursive;font-size:clamp(92px,17vw,155px)
 }
 </style>
 </head>
-<body>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const openButton = document.getElementById('openInvitation');
+  const opening = document.getElementById('opening');
+  const video = document.getElementById('videoAurora');
+
+  openButton.addEventListener('click', async function () {
+
+    video.muted = false;
+    video.volume = 1;
+
+    try {
+      await video.play();
+    } catch (e) {
+      console.log("O navegador bloqueou o áudio.");
+    }
+
+    opening.classList.add('hidden');
+
+    setTimeout(function () {
+      opening.remove();
+    }, 900);
+
+  });
+
+});
+</script>
+  <body>
+    <div class="opening" id="opening">
+  <div class="opening-inner">
+    <div class="opening-flowers">🌸 🦋 🌸</div>
+
+    <div class="opening-kicker">
+      Você foi convidado para uma história de amor
+    </div>
+
+    <div class="opening-title">
+      Aurora
+    </div>
+
+    <div class="opening-sub">
+      Um dia mágico no<br>
+      <strong>Jardim Encantado</strong>
+    </div>
+
+    <button class="open-btn" id="openInvitation">
+      ✨ TOQUE PARA ABRIR ✨
+      <span>e ouvir a magia</span>
+    </button>
+
+    <div class="audio-note">
+      🎶 O vídeo será reproduzido com áudio.
+    </div>
+  </div>
+</div>
 <header class="hero">
-  <video autoplay muted loop playsinline controls poster="">
+  <video id="videoAurora" autoplay muted loop playsinline controls>
     <source src="video-aurora.mp4" type="video/mp4">
     Seu navegador não consegue reproduzir este vídeo.
   </video>
@@ -108,12 +163,19 @@ h1{margin:12px 0 0;font-family:'Allura',cursive;font-size:clamp(92px,17vw,155px)
     <a class="btn primary" href="https://wa.me/5531971444254?text=Ol%C3%A1!%20Quero%20confirmar%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%201%20ano%20da%20Aurora." target="_blank" rel="noopener">♡ <span>CONFIRMAR PRESENÇA</span><b>→</b></a>
   </div>
 
-  <div class="warning"
-    
-    
- <div class="warning"><strong>✨ Atenção, convidados ✨</strong><br>
-  Para que possamos organizar tudo com muito carinho, a confirmação de presença é indispensável. <strong>Quem não confirmar presença não conseguirá entrar na festa.</strong></div>
-</section><br><em>Confirmar presença até o dia 29 de novembro.</em></div>
+  <div class="warning">
+  <strong>✨ Atenção, convidados ✨</strong>
+
+  <p>
+    Para que possamos organizar tudo com muito carinho,
+    a confirmação de presença é indispensável.
+    Quem não confirmar presença não conseguirá entrar na festa.
+  </p>
+
+  <p>
+    <em>Confirmar presença até o dia 29 de novembro.</em>
+  </p>
+</div>
 </section>
 
 <section class="parents">
