@@ -296,7 +296,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <a class="btn secondary" href="https://maps.app.goo.gl/dAVg8Ru5mXF5zsZP7" target="_blank" rel="noopener">📍 <span>COMO CHEGAR</span><b>→</b></a>
 
-    <a class="btn primary" href="https://wa.me/5531971444254?text=Ol%C3%A1!%20Quero%20confirmar%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%201%20ano%20da%20Aurora." target="_blank" rel="noopener">♡ <span>CONFIRMAR PRESENÇA</span><b>→</b></a>
+    <button class="btn primary" type="button" onclick="document.getElementById('confirmacao').scrollIntoView({behavior:'smooth'})">
+  ♡ <span>CONFIRMAR PRESENÇA</span><b>→</b>
+</button>
   </div>
 
   <div class="warning">
@@ -329,5 +331,21 @@ function toggleGifts(){
   else{panel.setAttribute('hidden','');btn.setAttribute('aria-expanded','false');}
 }
 </script>
+    <section id="confirmacao" style="padding:40px 15px; text-align:center;">
+  <h2>♡ Confirme sua presença</h2>
+  <p>Será uma alegria ter você conosco! 🌸</p>
+
+  <div style="max-width:640px; margin:25px auto; background:#fff; border-radius:20px; overflow:hidden;">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfikOlMN6Dgu5eEtsLVEccX2p2yA5JxDF2DUOsMDIEh4HPVpw/viewform?embedded=true"
+      width="100%"
+      height="877"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Carregando…
+    </iframe>
+  </div>
+    </section>
 </body>
 </html>
