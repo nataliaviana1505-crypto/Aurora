@@ -330,8 +330,16 @@ function toggleGifts(){
   if(open){panel.removeAttribute('hidden');btn.setAttribute('aria-expanded','true');}
   else{panel.setAttribute('hidden','');btn.setAttribute('aria-expanded','false');}
 }
+function abrirConfirmacao(){
+  const confirmacao = document.getElementById('confirmacao');
+  confirmacao.style.display = 'block';
+  setTimeout(() => {
+    confirmacao.scrollIntoView({behavior:'smooth'});
+  }, 100);
+}  
+  
 </script>
-    <section id="confirmacao" style="padding:40px 15px; text-align:center;">
+    <section id="confirmacao" style="display:none; padding:40px 15px; text-align:center;">
   <h2>♡ Confirme sua presença</h2>
   <p>Será uma alegria ter você conosco! 🌸</p>
 
