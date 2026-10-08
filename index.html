@@ -65,6 +65,142 @@ h1{margin:12px 0 0;font-family:'Allura',cursive;font-size:clamp(92px,17vw,155px)
 .main-invite{padding-top:50px}
 .event-row strong{font-size:23px}
 }
+/* ===== ABERTURA DO CONVITE ===== */
+
+.opening{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.9), transparent 30%),
+    linear-gradient(145deg,#fff8f7,#f8eef5,#fffaf5);
+  text-align:center;
+  transition:opacity .8s ease, visibility .8s ease;
+}
+
+.opening.hidden{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.opening-inner{
+  width:100%;
+  max-width:520px;
+  padding:30px 22px;
+  box-sizing:border-box;
+}
+
+.opening-flowers{
+  font-size:25px;
+  letter-spacing:12px;
+  margin-bottom:28px;
+}
+
+.opening-kicker{
+  font-family:'Montserrat',sans-serif;
+  font-size:17px;
+  line-height:1.5;
+  color:#6f6870;
+  margin-bottom:14px;
+}
+
+.opening-title{
+  font-family:'Allura',cursive;
+  font-size:58px;
+  line-height:1;
+  color:#b86f8d;
+  margin-bottom:20px;
+}
+
+.opening-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:25px;
+  line-height:1.35;
+  color:#71646d;
+  margin-bottom:28px;
+}
+
+.opening-sub strong{
+  display:block;
+  font-size:31px;
+  color:#927ba9;
+  margin-top:4px;
+}
+
+.open-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:14px 24px;
+  border:0;
+  border-radius:999px;
+  background:linear-gradient(135deg,#b86f8d,#927ba9);
+  color:white;
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:.5px;
+  box-shadow:0 8px 22px rgba(146,123,169,.25);
+  cursor:pointer;
+}
+
+.open-btn span{
+  display:inline;
+  font-size:13px;
+  font-weight:400;
+  opacity:.95;
+}
+
+.audio-note{
+  margin-top:14px;
+  font-family:'Montserrat',sans-serif;
+  font-size:11px;
+  line-height:1.4;
+  color:#8b8188;
+}
+
+@media(max-width:700px){
+  .opening{
+    padding:18px;
+  }
+
+  .opening-inner{
+    padding:25px 15px;
+  }
+
+  .opening-flowers{
+    font-size:22px;
+    letter-spacing:8px;
+    margin-bottom:22px;
+  }
+
+  .opening-kicker{
+    font-size:15px;
+  }
+
+  .opening-title{
+    font-size:52px;
+  }
+
+  .opening-sub{
+    font-size:22px;
+  }
+
+  .opening-sub strong{
+    font-size:27px;
+  }
+
+  .open-btn{
+    width:100%;
+    max-width:300px;
+  }
+  }
 </style>
 </head>
 <script>
